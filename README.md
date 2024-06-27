@@ -1,42 +1,8 @@
-# Bad Dice
+# React + Vite
 
-# Description 📝
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-This is the bones of a visual novel type game. A Collab of Sam and Bryce.
+Currently, two official plugins are available:
 
-# Table of Contents 📚
-
- - [Deployed Site](#deployed-site)
- - [Installation](#installation)
- - [Usage](#usage)
- - [Technologies](#technologies)
- - [License](#license)
-
-
-# Deployed Site 🌎
-Itch.io Page
-
-# Installation 📎
-- Run npm i to install dependencies in the local project directory.
-
-# Usage
- - Open integrated terminal
- - Run npm run develop
- - Localhost: 5173 browser will appear 
-
-# Technologies 🌐
-
-- JavaScript
-- CSS
-- HTML
-- Express
-- React
-- Node
-
-# Acknowledgements
-
-
-# License ©
-
-Licensed under the MIT license. Copyright @ MIT. All rights reserved.
-
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
