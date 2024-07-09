@@ -6,6 +6,7 @@ import Response from '../components/Response'
 import Scenario from '../components/Scenario'
 import { scenarios } from '../data/scenarios' 
 
+
 const Game = () => {
 
     const [currentScenario, setCurrentScenario] = useState(scenarios[0]);
@@ -36,9 +37,9 @@ const Game = () => {
 
     const renderEndingContent = () => {
         return (
-            <div style={{backgroundColor: 'black', height:'30%', marginTop: '2rem', display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
-                <h2>You have reached one of the Endings.</h2>
-                <Link style={{color: 'white'}} to="/">Play Again</Link>
+            <div class="notebook-page" style={{height: '30%'}}>
+                <h2 class="title">You have reached one of the Endings.</h2>
+                <Link class="scenario-text" to="/">Play Again</Link>
             </div>
         );
     };

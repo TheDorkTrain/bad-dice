@@ -1,0 +1,46 @@
+.notebook-page {
+    background-color: #fff;
+    background-image: 
+      linear-gradient(90deg, transparent 79px, #edf4f5 79px, red 81px, transparent 81px),
+      linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    border-left: 1px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 100%;
+    padding: 40px 0 0 100px;
+    position: relative;
+  }
+  
+  .notebook-page::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 79px;
+    background: linear-gradient(to right, transparent, rgba(255,0,0,0));
+  }
+  
+  .header {
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .title {
+    color: #2c3e50;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+  }
+  
+  .scenario-text {
+    color: #34495e;
+    font-family: 'Courier New', monospace;
+    margin: 0;
+  }
+  
+  .content {
+    font-family: 'Courier New', monospace;
+    color: #2c3e50;
+  }
+  
