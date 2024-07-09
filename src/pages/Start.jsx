@@ -1,52 +1,91 @@
-import { useState } from 'react'; 
-import { Link } from 'react-router-dom';
-import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState, useCallback } from 'react';
 import GameTitle from '../assets/images/gametitle1.png'
+import diceRollSound from '../assets/audio/diceroll.mp3'
+
+import Options from '../components/OptionMenu';
+
+const audio = new Audio(diceRollSound);
+
+function playSound() {
+  audio.play();
+}
+
+const ActivatableLink = ({ to, children, style, onClick }) => {
+  const navigate = useNavigate();
+
+  const handleAction = useCallback(() => {
+    playSound();
+    onClick();
+    navigate(to);
+  }, [navigate, to, onClick]);
+
+  const handleKeyDown = useCallback((event) => {
+    if (event.key === 'Enter') {
+      handleAction();
+    }
+  }, [handleAction]);
+
+  return (
+    <div 
+      tabIndex="0" 
+      role="button" 
+      onKeyDown={handleKeyDown}
+      onClick={handleAction}
+      style={{ ...style, cursor: 'pointer' }}
+    >
+      <Link to={to} style={style} onClick={(e) => e.preventDefault()}>
+        {children}
+      </Link>
+    </div>
+  );
+};
 
 const Start = () => {
+  const [ secondary, setSecondary ] = useState('')
+  const navigate = useNavigate();
 
-    const [result, setResult] = useState(null);
-    const [previousRoll, setPreviousRoll] = useState(null);
-    const [badLuck, setBadLuck] = useState(false);
+  const handleStart = useCallback(() => {
+    // You can add any additional logic here if needed
+  }, []);
 
-    const rollDice = () => {
-        const newRoll = Math.floor(Math.random() * 20) + 1;
-        setResult(newRoll);
-        setPreviousRoll(result);
-      };
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      if (event.key === 'Enter') {
+        playSound();
+        navigate('/Game');
+      }
+    };
 
-      useEffect(() => {
-        if (result === 1 && previousRoll === 1) {
-          setBadLuck(true);
-          <Link to="/Game"/>
-        } else {
-          setBadLuck(false);
-        }
-      }, [result, previousRoll]);
-    
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [navigate]);
 
 
+  
     return (
 <>
+<Options secondary={secondary} setSecondary={setSecondary} />
+<div className="startMenu">
 <figure><img src={GameTitle} style={{height: '10rem', width: '40rem'}}></img></figure>
-<button style={{color: 'black'}}> <Link to="/Game">START</Link></button>
-{/* <button onClick={rollDice}>Roll D20</button> */}
-{result && (
-        <div
-        style={{
-            width: '100px',
-            height: '115px',
-            backgroundColor: badLuck ? '#ff6b6b' : 'black',
-            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            fontSize: '24px',
-            fontWeight: 'bold',
-            margin: '20px auto',
-          }}
+<ActivatableLink  
+          onClick={handleStart}
+          style={{
+            fontWeight: 'bolder',
+            color: 'black', 
+            backgroundColor: 'transparent',  
+            border: "1px solid transparent", 
+            fontSize: '2rem'
+          }} 
+          to="/Game"
         >
-          {result} </div>)}
+          Press Enter to START
+        </ActivatableLink>
+
+</div>
 </>
     );
 }
