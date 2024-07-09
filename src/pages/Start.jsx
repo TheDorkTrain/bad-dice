@@ -2,14 +2,26 @@ import { Link, useNavigate } from 'react-router-dom';
 import React, { useEffect, useState, useCallback } from 'react';
 import GameTitle from '../assets/images/gametitle1.png'
 import diceRollSound from '../assets/audio/diceroll.mp3'
+import fireside from '../assets/audio/fireside.mp3'
 
 import Options from '../components/OptionMenu';
 
 const audio = new Audio(diceRollSound);
+const music = new Audio(fireside);
+music.loop = true;
 
 function playSound() {
   audio.play();
 }
+
+function playMusic() {
+  music.muted = false
+  music.play();
+}
+
+document.body.addEventListener("mousemove", function () {
+  playMusic()
+})
 
 const ActivatableLink = ({ to, children, style, onClick }) => {
   const navigate = useNavigate();
@@ -68,7 +80,7 @@ const Start = () => {
   
     return (
 <>
-<Options secondary={secondary} setSecondary={setSecondary} />
+<Options secondary={secondary} setSecondary={setSecondary} music={music}  />
 <div className="startMenu">
 <figure><img src={GameTitle} style={{height: '10rem', width: '40rem'}}></img></figure>
 <ActivatableLink  

@@ -34,18 +34,30 @@ const Game = () => {
         }
     };
 
+    const renderEndingContent = () => {
+        return (
+            <div style={{backgroundColor: 'black', height:'30%', marginTop: '2rem', display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
+                <h2>You have reached one of the Endings.</h2>
+                <Link style={{color: 'white'}} to="/">Play Again</Link>
+            </div>
+        );
+    };
+
+
     return (
 <> 
-<div>
-<Dice emotion={emotion} />
-</div>
+{!currentScenario.ending && (
+                <div>
+                    <Dice emotion={emotion} />
+                </div>
+            )}
 
 <Scenario 
                     scenario={currentScenario} 
                     onRespond={handleRespond} 
                 />
 
-
+{currentScenario.ending && renderEndingContent()}
 
 </>
 

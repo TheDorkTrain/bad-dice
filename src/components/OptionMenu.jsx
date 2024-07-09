@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from './Modal'
 
 
-function Options({secondary, setSecondary}) {
+function Options({secondary, setSecondary, music}) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
     const [audioLevel, setAudioLevel] = useState(100);
@@ -31,6 +31,7 @@ function Options({secondary, setSecondary}) {
         setAudioLevel(newLevel);
         // Here you would also update your actual audio levels
         // For example: yourAudioElement.volume = newLevel / 100;
+        music.volume = newLevel / 100;
     };
 
 
@@ -57,7 +58,7 @@ function Options({secondary, setSecondary}) {
               value={audioLevel}
               onChange={handleAudioChange}
             />  
-            Audio Level: {audioLevel}%
+            Music Level: {audioLevel}%
           </label>
         </div>
       );
@@ -76,6 +77,12 @@ function Options({secondary, setSecondary}) {
               <div style={{display: 'flex', justifyContent: 'center' }}>
                 <div> <h1>Sammi Sashuttle <a  style={{color: 'yellow'}} target='_blank' href="https://github.com/Sashuttle ">GitHub</a> </h1>
                 <h1>theDorkTrain <a  style={{color: 'yellow'}} target='_blank' href="https://github.com/thedorktrain ">GitHub</a> </h1>
+
+                <p>Fireside Tales by Darren Curtis | https://www.darrencurtismusic.com/ </p>
+<p>Music promoted on https://www.chosic.com/free-music/all/</p><p>
+Creative Commons Attribution 3.0 Unported (CC BY 3.0)
+https://creativecommons.org/licenses/by/3.0/
+ </p>
                
                </div>
 
