@@ -7,6 +7,9 @@
     border-left: 1px solid white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
   
   .notebook-page::before {
@@ -20,6 +23,7 @@
   }
   
   .header {
+    flex-shrink: 0; 
     display: flex;
     gap: 4rem;
     margin-bottom: 1rem;
@@ -37,10 +41,14 @@
     font-family: 'Courier New', monospace;
     margin: 0;
     margin-left: 6rem;
+    margin-bottom: 20px;
   }
   
   .content {
     font-family: 'Courier New', monospace;
     color: #2c3e50;
+    flex-grow: 1; /* Allow content to grow and fill available space */
+    overflow-y: auto; /* Enable vertical scrolling for content */
+    padding-right: 20px; /* Add some padding for the scrollbar */
   }
   

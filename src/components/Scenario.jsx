@@ -38,7 +38,7 @@ function Scenario ({ scenario, onRespond }) {
               <h2 className="scenario-text">{displayText}</h2>
             </div>
             {isTypingComplete && (
-              <div className="content">
+              <div className="content" style={{display: 'flex', flexDirection: 'column', gap: '15px'}}>
                 {scenario.responses.map((response, index) => (
                   <Response 
                     key={index} 
