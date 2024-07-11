@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import React, { useEffect, useState, useCallback } from 'react';
-import GameTitle from '../assets/images/gametitle1.png'
-import diceRollSound from '../assets/audio/diceroll.mp3'
-import fireside from '../assets/audio/fireside.mp3'
+const GameTitle = new URL('../assets/images/gametitle1.png', import.meta.url).href
+const diceRollSound = new URL('../assets/audio/diceroll.mp3', import.meta.url).href
+const fireside = new URL('../assets/audio/fireside.mp3', import.meta.url).href
 
 import Options from '../components/OptionMenu';
 

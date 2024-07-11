@@ -23,6 +23,8 @@ const Modal = ({ isOpen, onClose, children }) => {
     <div
       style={{
         position: 'fixed',
+        width: '1250px',
+        height: '1080px',
         top: 0,
         left: 0,
         right: 0,
