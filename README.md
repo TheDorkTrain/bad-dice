@@ -22,10 +22,12 @@ Logo- Created by Bryce
 
 Music- Fireside Tales by Darren Curtis: https://www.darrencurtismusic.com/ https://www.youtube.com/watch?v=_6PSz6Aj8R0
 
-
 ## Collaborators 
 TheDorkTrain
 Samzilla
+
+## License
+MIT
 
 ## Acknowledgements
 We had an incredible time creating this game, diving deep into the world of coding and unleashing our creativity. This project not only allowed us to expand our coding skills but also provided a platform to let our imaginations run wild.
