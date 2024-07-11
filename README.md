@@ -1,8 +1,38 @@
 # Bad Dice
+This visual novel game, created for the "Only One of Any Asset" (O2A2) Visual Novel Jam, revolves around a dice that constantly rolls natural 1s. Players engage in various dialogue scenarios with the dice, leading to different humorous and unique outcomes.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies & Resources Used
+Visual Studio Code: https://code.visualstudio.com/
 
-Currently, two official plugins are available:
+React: https://react.dev/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vite: https://www.npmjs.com/package/vite
+
+Whiteboard: https://apps.apple.com/us/app/whiteboard-just-draw-together/id1160517834
+
+ProKnockOut: https://apps.apple.com/us/app/proknockout-cut-paste-photos/id944665061
+
+
+## Pictures & Sound
+Background Image- Taken and edited by Bryce
+
+Dice with emotions- Taken and edited by Samantha
+
+Logo- Created by Bryce
+
+Music- Fireside Tales by Darren Curtis: https://www.darrencurtismusic.com/ https://www.youtube.com/watch?v=_6PSz6Aj8R0
+
+
+## Collaborators 
+TheDorkTrain
+Samzilla
+
+## Acknowledgements
+We had an incredible time creating this game, diving deep into the world of coding and unleashing our creativity. This project not only allowed us to expand our coding skills but also provided a platform to let our imaginations run wild.
+
+We worked great together, and it’s always such a joy collaborating on projects like this. We owe a huge thank you to our teacher, who taught us everything we know about coding. Her guidance and expertise made this project possible, and we are grateful for the knowledge and inspiration she provided. Thank you for being an essential part of our journey.
+
+## Github profiles
+https://github.com/TheDorkTrain
+
+https://github.com/Sashuttle
