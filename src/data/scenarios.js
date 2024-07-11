@@ -1,6 +1,6 @@
 //NOTE: Add more schenarios
 export const scenarios = [
-    {
+    {//26 words
         id: 1,
         text:'Oh darn! Another Nat 1? We are having some bad luck today!',
         responses: [
@@ -14,9 +14,9 @@ export const scenarios = [
         id: 2,
         text:'I knew you would understand! Let\'s get back to playing!',
         responses: [
-            {text:'Response 1', emotion:'happy'},
-            {text:'Response 2', emotion:'angry'},
-            {text:'Response 3', emotion:'blush'},
+            {text:'Hell yeah! Let\s roll!!!', emotion:'happy'},
+            {text:'Fine, but NO more nat 1s!', emotion:'angry'},
+            {text:'Of course, anything for you!', emotion:'blush'},
         ],
     },
     //The Jail Path
@@ -24,12 +24,12 @@ export const scenarios = [
         id: 3,
         text:'WHAT! THATS JUST HOW PROBABILITY WORKS!',
         responses: [
-            {text:'Response 1', emotion:'happy'},
-            {text:'Response 2', emotion:'angry'},
-            {text:'Response 3', emotion:'blush'},
+            {text:'Haha, I guess you\re just extra special.', emotion:'happy'},
+            {text:'REALLY?! CAN\T YOU ROLL ANYTHING HIGHER THAN A 1?', emotion:'sad'},
+            {text:'You\re still my favorite dice!', emotion:'blush'},
         ],
     },
-    //The Lovers Path
+    //The Lovers Path 147 words 
     {
         id: 4,
         text:'Oh... I had no idea that\'s how you felt...',
@@ -72,7 +72,7 @@ export const scenarios = [
             {text:'moans and releases', emotion:'blush', nextScenario: 9},
         ],
     },
-    {
+    {//72 words
         id: 9,
         ending: true,
         text:'You moan and release the dice onto the table even though the dungeon master did not ask. You turn and look at the table. Everyone is staring at you. There is silence. The player to your left yells “NAT 20 HELL YEAH” Everyone Cheers. You have no idea what you were suppose to be rolling for but it feels great. You look down at your die, happy you gave it another chance.',

@@ -1,8 +1,8 @@
 import React from 'react';
-import happyDice from '../assets/images/happydice.png';
-import sadDice from '../assets/images/saddice.png';
-import angryDice from '../assets/images/angrydice.png';
-import blushDice from '../assets/images/blushdice.png';
+import happyDice from '../assets/images/happyDice.png';
+import sadDice from '../assets/images/sadDice.png';
+import angryDice from '../assets/images/angryDice.png';
+import blushDice from '../assets/images/blushDice.png';
 
 const emotionImages = {
     happy: happyDice,
