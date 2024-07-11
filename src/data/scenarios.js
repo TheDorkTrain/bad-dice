@@ -1,4 +1,5 @@
 //NOTE: Add more schenarios
+//according to chat gpt we have 218 words for our scenario texts and 278 for all response text total so far 496
 export const scenarios = [
     {//26 words
         id: 1,
