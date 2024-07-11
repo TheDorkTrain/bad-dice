@@ -24,14 +24,14 @@ export const scenarios = [
         id: 3,
         text:'WHAT! THATS JUST HOW PROBABILITY WORKS!',
         responses: [
-            {text:'Haha, I guess you\re just extra special.', emotion:'happy'},
-            {text:'REALLY?! CAN\T YOU ROLL ANYTHING HIGHER THAN A 1?', emotion:'sad'},
-            {text:'You\re still my favorite dice!', emotion:'blush'},
+            {text:'Haha, I guess youre just extra special.', emotion:'happy'},
+            {text:'REALLY?! CANT YOU ROLL ANYTHING HIGHER THAN A 1?', emotion:'sad'},
+            {text:'Youre still my favorite dice!', emotion:'blush'},
         ],
     },
     {
         id: 10,
-        text:'I\m sorry, but you have to admit, that fireball was really cool!',
+        text:'Im sorry, but you have to admit, that fireball was really cool!',
         responses: [
             {text:'...yeah it was pretty cool, but you still rolled a nat 1!', emotion:'happy'},
             {text:'MY EYEBROWS WILL TAKE FOREVER TO GROW BACK!', emotion:'sad'},
@@ -49,19 +49,19 @@ export const scenarios = [
     },
     {
         id: 12,
-        text:'Please don\t throw me in dice jail, remember the time we saw that sexy noble at the royal feast?!',
+        text:'Please dont throw me in dice jail, remember the time we saw that sexy noble at the royal feast?!',
         responses: [
-            {text:'They were very sexy, but your nat 1 didn\t help...', emotion:'happy'},
+            {text:'They were very sexy, but your nat 1 didnt help...', emotion:'happy'},
             {text:'BECAUSE OF YOU THEY PUT A RESTRAINING ORDER ON ME! YOURE THE WORST WINGMAN EVER!!!!', emotion:'angry'},
             {text:'Things were going great and I thought it was going to go somewhere until...I burped in their face', emotion:'blush'},
         ],
     },
     {
         id: 13,
-        text:'Look, I\m sorry for all the nat 1s. I promise it won\t happen again!!!',
+        text:'Look, Im sorry for all the nat 1s. I promise it wont happen again!!!',
         responses: [
             {text:'Fine, one last chance and thats it!', emotion:'happy'},
-            {text:'YOU ARE BY FAR THE WORST DICE EVER! I\M DONE WITH YOU!!!', emotion:'sad'},
+            {text:'YOU ARE BY FAR THE WORST DICE EVER! IM DONE WITH YOU!!!', emotion:'sad'},
         ],
     },
     //The Lovers Path 147 words total for this path 
@@ -117,7 +117,7 @@ export const scenarios = [
     {//65 words
         id: 14,
         ending: true,
-        text:'You\re seething with frustration and glare at your dice as it lands yet another dreaded nat 1. Your face reddens, hands trembling with anger as you snatch your traitorous dice from the table. With a dramatic flourish, you toss the dice into a small, ornate box labeled "Dice Jail", slamming the lid shut with finality. The other players echange amused glances, empathizing with your frustration.',
+        text:'Youre seething with frustration and glare at your dice as it lands yet another dreaded nat 1. Your face reddens, hands trembling with anger as you snatch your traitorous dice from the table. With a dramatic flourish, you toss the dice into a small, ornate box labeled "Dice Jail", slamming the lid shut with finality. The other players echange amused glances, empathizing with your frustration.',
         responses: [
         ],
     },
