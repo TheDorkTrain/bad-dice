@@ -1,7 +1,7 @@
 //NOTE: Add more schenarios
-//according to chat gpt we have 218 words for our scenario texts and 278 for all response text total so far 496
+//according to google docs with all the words and punctiation we have a total of 746 words on this page of code (word count)
 export const scenarios = [
-    {//26 words
+    {//Introduction Scenario - 26 words
         id: 1,
         text:'Oh darn! Another Nat 1? We are having some bad luck today!',
         responses: [
@@ -15,54 +15,82 @@ export const scenarios = [
         id: 2,
         text:'I knew you would understand! Let\'s get back to playing!',
         responses: [
-            {text:'Hell yeah! Let\s roll!!!', emotion:'happy'},
-            {text:'Fine, but NO more nat 1s!', emotion:'angry'},
-            {text:'Of course, anything for you!', emotion:'blush'},
+            {text:'Hell yeah! Let\s roll!!!', emotion:'happy', nextScenario: 16},
+            {text:'Fine, but NO more nat 1s!', emotion:'angry', nextScenario: 10},
+            {text:'Of course, anything for you!', emotion:'blush', nextScenario: 4},
+        ],
+    },
+    {
+        id: 16,
+        text:'Im sorry I caused you to trip and fall, but look we found treasure!',
+        responses: [
+            {text:'Ouch, that really hurt...but HELL YEAH TREASURE!', emotion:'happy', nextScenario: 17},
+            {text:'You always know how to surprise me, I think we need some alone time', emotion:'blush', nextScenario: 4},
+            {text:'I FELL ON MY FACE! THIS BETTER BE WORTH IT!', emotion:'angry', nextScenario: 3},
+        ],
+    },
+    {
+        id: 17,
+        text:'*Player Sneezes* Bless you! Hey look at that, we revealed a secret door!',
+        responses: [
+            {text:'WHO CARES ABOUT THE DOOR! All the ENEMIES know im HERE now!', emotion:'angry', nextScenario: 12},
+            {text:'I dont mind these nat 1s, but please stop, youre embarassing me.', emotion:'sad', nextScenario: 18},
+            {text:'*wipes nose* Look at that!', emotion:'happy', nextScenario: 18},
+        ],
+    },
+    {
+        id: 18,
+        text:'*Player Mixes Potions and an explosion of glitter happens* WOW! That was so pretty, we should do it again!',
+        responses: [
+            {text:'I do look fabulous now!', emotion:'happy', nextScenario: 15},
+            {text:'I should spread this glitter from my body to yours!', emotion:'blush', nextScenario: 9},
+            {text:'What did you just do to me?! GLITTER WILL NEVER GO AWAY! YOU RUINED MY ARMOR!', emotion:'angry', nextScenario: 14},
         ],
     },
     //The Jail Path 207 words total for this path
+    //If there are different paths you would like some of these answers to go to, feel free to change it, i just felt like it made sense for this to mainly lead to dice jail
     {
         id: 3,
         text:'WHAT! THATS JUST HOW PROBABILITY WORKS!',
         responses: [
-            {text:'Haha, I guess youre just extra special.', emotion:'happy'},
-            {text:'REALLY?! CANT YOU ROLL ANYTHING HIGHER THAN A 1?', emotion:'sad'},
-            {text:'Youre still my favorite dice!', emotion:'blush'},
+            {text:'Haha, I guess youre just extra special.', emotion:'happy', nextScenario: 2},
+            {text:'REALLY?! CANT YOU ROLL ANYTHING HIGHER THAN A 1?', emotion:'sad', nextScenario: 10},
+            {text:'Youre still my favorite dice!', emotion:'blush', nextScenario: 4},
         ],
     },
     {
         id: 10,
         text:'Im sorry, but you have to admit, that fireball was really cool!',
         responses: [
-            {text:'...yeah it was pretty cool, but you still rolled a nat 1!', emotion:'happy'},
-            {text:'MY EYEBROWS WILL TAKE FOREVER TO GROW BACK!', emotion:'sad'},
-            {text:'I WISH THAT FIREBALL WOULD HAVE MELTED YOU!', emotion:'angry'},
+            {text:'...yeah it was pretty cool, but you still rolled a nat 1!', emotion:'happy', nextScenario: 11},
+            {text:'MY EYEBROWS WILL TAKE FOREVER TO GROW BACK!', emotion:'angry', nextScenario: 11},
+            {text:'I WISH THAT FIREBALL WOULD HAVE MELTED YOU!', emotion:'sad', nextScenario: 11},
         ],
     },
     {
         id: 11,
         text:'Okay well, remember that time we snuck past the guards at Cragmaw Castle?',
         responses: [
-            {text:'You had me sing my own theme song...it was a catchy tune', emotion:'happy'},
-            {text:'I sneezed so loud all of the guards were alerted!!!!', emotion:'angry'},
-            {text:'I ended up tripping over my own feet!', emotion:'blush'},
+            {text:'You had me sing my own theme song...it was a catchy tune', emotion:'happy', nextScenario: 17},
+            {text:'I farted so loud all of the guards were alerted!!!!', emotion:'angry', nextScenario: 12 },
+            {text:'I ended up tripping over my own feet!', emotion:'sad', nextScenario: 12},
         ],
     },
     {
         id: 12,
         text:'Please dont throw me in dice jail, remember the time we saw that sexy noble at the royal feast?!',
         responses: [
-            {text:'They were very sexy, but your nat 1 didnt help...', emotion:'happy'},
-            {text:'BECAUSE OF YOU THEY PUT A RESTRAINING ORDER ON ME! YOURE THE WORST WINGMAN EVER!!!!', emotion:'angry'},
-            {text:'Things were going great and I thought it was going to go somewhere until...I burped in their face', emotion:'blush'},
+            {text:'They were very sexy, but your nat 1 didnt help...', emotion:'happy', nextScenario: 13},
+            {text:'BECAUSE OF YOU THEY PUT A RESTRAINING ORDER ON ME! YOURE THE WORST WINGMAN EVER!!!!', emotion:'angry', nextScenario: 13},
+            {text:'Things were going great and I thought it was going to go somewhere until...I burped in their face', emotion:'blush', nextScenario: 13},
         ],
     },
     {
         id: 13,
         text:'Look, Im sorry for all the nat 1s. I promise it wont happen again!!!',
         responses: [
-            {text:'Fine, one last chance and thats it!', emotion:'happy'},
-            {text:'YOU ARE BY FAR THE WORST DICE EVER! IM DONE WITH YOU!!!', emotion:'sad'},
+            {text:'Fine, one last chance and thats it!', emotion:'happy', nextScenario: 15}, 
+            {text:'YOU ARE BY FAR THE WORST DICE EVER! IM DONE WITH YOU!!!', emotion:'sad', nextScenario: 14},
         ],
     },
     //The Lovers Path 147 words total for this path 
@@ -72,7 +100,7 @@ export const scenarios = [
         responses: [
             {text:'Rolling dice with you has its advantages', emotion:'happy', nextScenario: 2},
             {text:'I like the feel of your polyhedral plastic against my skin', emotion:'blush', nextScenario: 5},
-            {text:'Your the only 1 I need- TO THROW AWAY', emotion:'angry', nextScenario: 0},
+            {text:'Your the only 1 I need- TO THROW AWAY', emotion:'angry', nextScenario: 12},
         ],
     },
     {
@@ -85,10 +113,10 @@ export const scenarios = [
     },
     {
         id: 6,
-        text:'Ooooohhhh.. Oh Yeahhhh….. Say Im a Bad Dice ',
+        text:'Ooooohhhh.. Oh Yeahhhh….. Say Im a Bad Dice',
         responses: [
             {text:'You are a Bad Dice…..', emotion:'blush', nextScenario: 7},
-            {text:'This is weird… I\'m going to put you away now..', emotion:'sad', nextScenario: 0},
+            {text:'This is weird… I\'m going to put you away now..', emotion:'sad', nextScenario: 14},
         ],
     },
     {
@@ -97,7 +125,7 @@ export const scenarios = [
         responses: [
             {text:'Ooooohhhh Yeah….. Kill my Character…', emotion:'blush', nextScenario: 8},
             {text:'You like it when I roll you off the table and step on you?', emotion:'blush', nextScenario: 8},
-            {text:'Actually you roll too many nat 1s for my liking', emotion:'sad', nextScenario: 0},
+            {text:'Actually you roll too many nat 1s for my liking', emotion:'sad', nextScenario: 13},
         ],
     },
     {
@@ -119,6 +147,13 @@ export const scenarios = [
         id: 14,
         ending: true,
         text:'Youre seething with frustration and glare at your dice as it lands yet another dreaded nat 1. Your face reddens, hands trembling with anger as you snatch your traitorous dice from the table. With a dramatic flourish, you toss the dice into a small, ornate box labeled "Dice Jail", slamming the lid shut with finality. The other players echange amused glances, empathizing with your frustration.',
+        responses: [
+        ],
+    },
+    {//60 words
+        id: 15,
+        ending: true,
+        text:'You roll the dice, and it lands on a perfect natural 20! You jump up, cheering wildly. The other players shout in excitement, high-fiving and clapping. The Dungeon Master smiles, nodding in approval. The room buzzes with joy and energy, and for a moment, everything feels perfect. The dice has redeemed itself, and you all celebrate the incredible roll together.',
         responses: [
         ],
     },

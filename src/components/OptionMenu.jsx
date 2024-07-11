@@ -75,7 +75,7 @@ function Options({secondary, setSecondary, music}) {
           case 'credits':
             return (<div>
               <div style={{display: 'flex', justifyContent: 'center' }}>
-                <div> <h1>Sammi Sashuttle <a  style={{color: 'yellow'}} target='_blank' href="https://github.com/Sashuttle ">GitHub</a> </h1>
+                <div> <h1>Samzilla <a  style={{color: 'yellow'}} target='_blank' href="https://github.com/Sashuttle ">GitHub</a> </h1>
                 <h1>theDorkTrain <a  style={{color: 'yellow'}} target='_blank' href="https://github.com/thedorktrain ">GitHub</a> </h1>
 
                 <p>Fireside Tales by Darren Curtis | https://www.darrencurtismusic.com/ </p>
@@ -112,7 +112,7 @@ https://creativecommons.org/licenses/by/3.0/
     <button  style={{ fontSize: "2rem"}}onClick={stateChange}>Credits</button>
     </nav>
     <div >
-       {optionTab(secondary)}
+      {optionTab(secondary)}
     </div>
 
 
