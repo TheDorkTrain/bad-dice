@@ -1,8 +1,8 @@
 import React from 'react';
-import happyDice from '../assets/images/happyDice.png';
-import sadDice from '../assets/images/sadDice.png';
-import angryDice from '../assets/images/angryDice.png';
-import blushDice from '../assets/images/blushDice.png';
+const happyDice = new URL('../assets/images/happyDice.png', import.meta.url).href
+const sadDice = new URL('../assets/images/sadDice.png', import.meta.url).href
+const angryDice = new URL('../assets/images/angryDice.png', import.meta.url).href
+const blushDice = new URL('../assets/images/blushDice.png', import.meta.url).href
 
 const emotionImages = {
     happy: happyDice,

@@ -37,9 +37,9 @@ const Game = () => {
 
     const renderEndingContent = () => {
         return (
-            <div class="notebook-page" style={{height: '30%'}}>
+            <div class="notebook-page" style={{height: '30%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
                 <h2 class="title">You have reached one of the Endings.</h2>
-                <Link class="scenario-text" to="/">Play Again</Link>
+                <Link to="/"><h3>Play Again</h3></Link>
             </div>
         );
     };

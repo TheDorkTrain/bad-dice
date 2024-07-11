@@ -34,7 +34,7 @@ function Scenario ({ scenario, onRespond }) {
         return (
             <div className="notebook-page">
             <div className="header">
-              <h2 className="title">Bad Dice |</h2>
+              <h2 className="title">Bad Dice|</h2>
               <h2 className="scenario-text">{displayText}</h2>
             </div>
             {isTypingComplete && (

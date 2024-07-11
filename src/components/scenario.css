@@ -6,9 +6,7 @@
     background-size: 100% 1.2em;
     border-left: 1px solid white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    height: 100%;
-    padding: 40px 0 0 100px;
-    position: relative;
+    height: 400px;
   }
   
   .notebook-page::before {
@@ -25,6 +23,7 @@
     display: flex;
     gap: 4rem;
     margin-bottom: 1rem;
+    margin-left: 6rem;
   }
   
   .title {
@@ -37,6 +36,7 @@
     color: #34495e;
     font-family: 'Courier New', monospace;
     margin: 0;
+    margin-left: 6rem;
   }
   
   .content {
