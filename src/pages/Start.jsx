@@ -9,6 +9,7 @@ import Options from '../components/OptionMenu';
 const audio = new Audio(diceRollSound);
 const music = new Audio(fireside);
 music.loop = true;
+music.volume = 0.3;
 
 function playSound() {
   audio.play();
