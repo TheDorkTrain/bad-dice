@@ -24,6 +24,7 @@ document.body.addEventListener("mousemove", function () {
   playMusic()
 })
 
+
 const ActivatableLink = ({ to, children, style, onClick }) => {
   const navigate = useNavigate();
 
@@ -55,12 +56,25 @@ const ActivatableLink = ({ to, children, style, onClick }) => {
 };
 
 const Start = () => {
-  const [ secondary, setSecondary ] = useState('')
+  const [ secondary, setSecondary ] = useState('');
+  const [completedEndings, setCompletedEndings] = useState([]);
   const navigate = useNavigate();
 
   const handleStart = useCallback(() => {
     // You can add any additional logic here if needed
   }, []);
+
+  useEffect(() => {
+    const storedEndings = JSON.parse(localStorage.getItem('completedEndings')) || [];
+    setCompletedEndings(storedEndings);
+  }, []);
+
+  const symbols = {
+    good: '⚀',
+    jail: '⚁',
+    naughty: '⚂',
+    punishment: '⚃'
+  };
 
   useEffect(() => {
     const handleKeyPress = (event) => {
@@ -99,6 +113,19 @@ const Start = () => {
         </ActivatableLink>
 
 </div>
+
+<div style={{fontSize: '1rem', alignSelf: 'end', marginRight: '3px'}}>
+        <h4 style={{color: 'black'}}>Endings Reached</h4>
+        <div id="ending-symbols" style={{fontSize: '3rem'}}>
+          {completedEndings.map((ending, index) => (
+            symbols[ending] && (
+              <span key={index} title={ending}>
+                {symbols[ending]}
+              </span>
+            )
+          ))}
+        </div>
+      </div>
 </>
     );
 }

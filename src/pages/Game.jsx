@@ -13,6 +13,14 @@ const Game = () => {
     const [emotion, setEmotion] = useState('happy');  // default emotion
     const [isLoading, setIsLoading] = useState(true);
 
+    function completeEnding(endingId) {
+        let completedEndings = JSON.parse(localStorage.getItem('completedEndings')) || [];
+        if (!completedEndings.includes(endingId)) {
+          completedEndings.push(endingId);
+          localStorage.setItem('completedEndings', JSON.stringify(completedEndings));
+        }
+      }
+
     useEffect(() => {
         const timer = setTimeout(() => {
             setIsLoading(false);
@@ -36,9 +44,10 @@ const Game = () => {
     };
 
     const renderEndingContent = () => {
+        completeEnding(currentScenario.name)
         return (
             <div class="notebook-page" style={{height: '30%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-                <h2 class="title">You have reached one of the Endings.</h2>
+                <h2 class="title">You have reached the {currentScenario.name} ending.</h2>
                 <Link to="/"><h3>Play Again</h3></Link>
             </div>
         );
