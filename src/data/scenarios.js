@@ -101,7 +101,7 @@ export const scenarios = [
         responses: [
             {text:'Rolling dice with you has its advantages', emotion:'happy', nextScenario: 2},
             {text:'I like the feel of your polyhedral plastic against my skin', emotion:'blush', nextScenario: 5},
-            {text:'Your the only 1 I need- TO THROW AWAY', emotion:'angry', nextScenario: 12},
+            {text:'You\'re the only 1 I need- TO THROW AWAY', emotion:'angry', nextScenario: 12},
         ],
     },
     {
@@ -180,7 +180,7 @@ export const scenarios = [
         id: 14,
         ending: true,
         name: 'jail',
-        text:'You\'re seething with frustration and glare at your dice as it lands yet another dreaded nat 1. Your face reddens, hands trembling with anger as you snatch your traitorous dice from the table. With a dramatic flourish, you toss the dice into a small, ornate box labeled "Dice Jail", slamming the lid shut with finality. The other players echange amused glances, empathizing with your frustration.',
+        text:'You\'re seething with frustration and glare at your dice as it lands yet another dreaded nat 1. Your face reddens, hands trembling with anger as you snatch your traitorous dice from the table. With a dramatic flourish, you toss the dice into a small, ornate box labeled "Dice Jail", slamming the lid shut with finality. The other players exchange amused glances, empathizing with your frustration.',
         responses: [
         ],
     },
