@@ -5,7 +5,7 @@ import Modal from './Modal'
 function Options({secondary, setSecondary, music}) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
-    const [audioLevel, setAudioLevel] = useState(100);
+    const [audioLevel, setAudioLevel] = useState(30);
 
     useEffect(() => {
         document.addEventListener('fullscreenchange', handleFullscreenChange);
@@ -41,7 +41,7 @@ function Options({secondary, setSecondary, music}) {
 
       const General = ({ isFullscreen, toggleFullscreen, audioLevel, handleAudioChange }) => (
         <div style={{display: 'flex' }}>
-          <label style={{height: '30%', width: '100%', fontSize: "3rem", display:'flex', gap: '10px', alignItems: "center",  justifyContent: 'center'}}>
+          {/* <label style={{height: '30%', width: '100%', fontSize: "3rem", display:'flex', gap: '10px', alignItems: "center",  justifyContent: 'center'}}>
             <input 
               style={{height: '50px', width:'50px', textAlign: "center"}}  
               type="checkbox" 
@@ -49,7 +49,7 @@ function Options({secondary, setSecondary, music}) {
               onChange={toggleFullscreen}
             /> 
             Fullscreen 
-          </label>
+          </label> */}
           <label style={{height: '30%', width: '100%', fontSize: "3rem", display:'flex', gap: '10px', alignItems: "center",  justifyContent: 'center'}}>
             <input
               type="range"

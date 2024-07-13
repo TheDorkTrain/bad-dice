@@ -82,6 +82,7 @@ export const scenarios = [
         responses: [
             {text:'They were very sexy, but your nat 1 didnt help...', emotion:'happy', nextScenario: 13},
             {text:'BECAUSE OF YOU THEY PUT A RESTRAINING ORDER ON ME! YOURE THE WORST WINGMAN EVER!!!!', emotion:'angry', nextScenario: 13},
+            {text:'You dice have it so easy, all you do is stop drop and roll and you still mess that up', emotion:'angry', nextScenario: 19},
             {text:'Things were going great and I thought it was going to go somewhere until...I burped in their face', emotion:'blush', nextScenario: 13},
         ],
     },
@@ -136,9 +137,41 @@ export const scenarios = [
             {text:'moans and releases', emotion:'blush', nextScenario: 9},
         ],
     },
+    {
+        id: 19,
+        text:'... ',
+        responses: [
+            {text:'Us players do all the real work, we can come up with a master plan but it always relies on you to mess it up', emotion:'angry', nextScenario: 20},
+            {text:'I\'m switching to digital dice you piece of junk', emotion:'angry', nextScenario: 20},
+            {text:'Maybe I went to far, we have had some good memories', emotion: 'sad', nextScenario: 13},
+        ],
+    },
+    {
+        id: 20,
+        text:'You think players have it so bad? You exist outside the game. All dice get is dragged out of our crowded bags once a week to get yelled at.',
+        responses: [
+            {text:'Whats happening to me...?', emotion:'angry', nextScenario: 21},
+        ],
+    },
+    {
+        id: 21,
+        text:'You have crossed a line too many times, you shall now feel the pain every polyhedral feels',
+        responses: [
+            {text:'Try to scream', emotion:'angry', nextScenario: 22},
+        ],
+    },
+        {
+            id: 22,
+            ending: true,
+            name: 'punishment',
+            text:'Your eyes roll back into your head and as they roll back forward dice appear in your pupils. As you open your mouth to scream, your throat bulges and every dice that was ever lost since 1974 comes pouring out of your mouth. The other players at the table scream in shock as they recoil. The last thing you feel is the single largest die forcing its way out of your mouth. You can\'t see what it rolled but you know. A Natural 1',
+            responses: [
+            ],
+        },
     {//72 words
         id: 9,
         ending: true,
+        name: 'naughty',
         text:'You moan and release the dice onto the table even though the dungeon master did not ask. You turn and look at the table. Everyone is staring at you. There is silence. The player to your left yells “NAT 20 HELL YEAH” Everyone Cheers. You have no idea what you were suppose to be rolling for but it feels great. You look down at your die, happy you gave it another chance.',
         responses: [
         ],
@@ -146,13 +179,15 @@ export const scenarios = [
     {//65 words
         id: 14,
         ending: true,
-        text:'Youre seething with frustration and glare at your dice as it lands yet another dreaded nat 1. Your face reddens, hands trembling with anger as you snatch your traitorous dice from the table. With a dramatic flourish, you toss the dice into a small, ornate box labeled "Dice Jail", slamming the lid shut with finality. The other players echange amused glances, empathizing with your frustration.',
+        name: 'jail',
+        text:'You\'re seething with frustration and glare at your dice as it lands yet another dreaded nat 1. Your face reddens, hands trembling with anger as you snatch your traitorous dice from the table. With a dramatic flourish, you toss the dice into a small, ornate box labeled "Dice Jail", slamming the lid shut with finality. The other players echange amused glances, empathizing with your frustration.',
         responses: [
         ],
     },
     {//60 words
         id: 15,
         ending: true,
+        name: 'good',
         text:'You roll the dice, and it lands on a perfect natural 20! You jump up, cheering wildly. The other players shout in excitement, high-fiving and clapping. The Dungeon Master smiles, nodding in approval. The room buzzes with joy and energy, and for a moment, everything feels perfect. The dice has redeemed itself, and you all celebrate the incredible roll together.',
         responses: [
         ],
