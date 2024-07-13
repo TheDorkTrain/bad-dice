@@ -4,6 +4,7 @@ const GameTitle = new URL('../assets/images/gametitle1.png', import.meta.url).hr
 const diceRollSound = new URL('../assets/audio/diceroll.mp3', import.meta.url).href
 const fireside = new URL('../assets/audio/fireside.mp3', import.meta.url).href
 
+
 import Options from '../components/OptionMenu';
 
 const audio = new Audio(diceRollSound);

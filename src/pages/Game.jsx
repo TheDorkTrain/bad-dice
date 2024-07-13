@@ -6,12 +6,15 @@ import Response from '../components/Response'
 import Scenario from '../components/Scenario'
 import { scenarios } from '../data/scenarios' 
 
+import VoiceActor from '../components/voice';
+
 
 const Game = () => {
 
     const [currentScenario, setCurrentScenario] = useState(scenarios[0]);
     const [emotion, setEmotion] = useState('happy');  // default emotion
     const [isLoading, setIsLoading] = useState(true);
+    const [emotionKey, setEmotionKey] = useState(0);
 
     function completeEnding(endingId) {
         let completedEndings = JSON.parse(localStorage.getItem('completedEndings')) || [];
@@ -35,13 +38,14 @@ const Game = () => {
 
     const handleRespond = (selectedEmotion, nextScenarioId) => {
         setEmotion(selectedEmotion);
+        setEmotionKey(prevKey => prevKey + 1);  // Increment the key
         const nextScenario = scenarios.find(scenario => scenario.id === nextScenarioId);
         if (nextScenario) {
-            setCurrentScenario(nextScenario);
+          setCurrentScenario(nextScenario);
         } else {
-            console.error(`Scenario with id ${nextScenarioId} not found`);
+          console.error(`Scenario with id ${nextScenarioId} not found`);
         }
-    };
+      };
 
     const renderEndingContent = () => {
         completeEnding(currentScenario.name)
@@ -55,7 +59,7 @@ const Game = () => {
 
 
     return (
-<> 
+<>   <VoiceActor emotion={emotion} emotionKey={emotionKey} />
 {!currentScenario.ending && (
                 <div>
                     <Dice emotion={emotion} />
